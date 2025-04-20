@@ -1,0 +1,147 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    width: 99%;
+    height: 730px;
+    background-size: cover;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color:rgb(255, 114, 0) ;
+}
+
+.icon {
+    width: 100px;
+    float: left;
+    height: 70px;
+}
+
+.icon img {
+    max-width: 72px;
+    padding-left: 20px;
+}
+
+.menu {
+    width: 400px;
+    height: 70px;
+    float: left;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+ul li {
+    margin-left: 30px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: "Ubuntu", arial;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    transition: 0.35s ease-in-out;
+
+}
+
+ul li a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(12, 12, 12);
+    transform: scale(1.1);
+}
+
+.loginAs {
+    width: 400px;
+    margin-right: 60px;
+    float: right;
+    text-align: right;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 16px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px black;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border: 3px solid rgb(8, 8, 8);
+}
+
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    color:rgb(0, 0, 0);
+    font-family: "Sofia", cursive;
+    font-size: 40px;
+    text-shadow: 5px 5px  5px rgb(255, 85, 0);
+
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Photo Row Styles */
+.photo-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* Individual Photo Styling */
+.photo-row img {
+    width: 300px;
+    height: 215px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(255, 114, 0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.photo-row img:hover {
+    transform: scale(1.1);
+}

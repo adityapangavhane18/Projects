@@ -1,0 +1,153 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    width: 99%;
+    height: 730px;
+    background-size: cover;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color:rgb(255, 114, 0) ;
+}
+
+.icon {
+    width: 100px;
+    float: left;
+    height: 70px;
+}
+
+.icon img {
+    max-width: 72px;
+    padding-left: 20px;
+}
+
+.menu {
+    width: 400px;
+    height: 70px;
+    float: left;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+ul li {
+    margin-left: 30px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: "Ubuntu", arial;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    transition: 0.35s ease-in-out;
+
+}
+
+ul li a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(12, 12, 12);
+    transform: scale(1.1);
+}
+
+.loginAs {
+    width: 400px;
+    margin-right: 60px;
+    float: right;
+    text-align: right;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 16px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px black;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border: 3px solid rgb(8, 8, 8);
+}
+
+.content {
+    display: flex;
+    margin: 80px;
+}
+
+.para {
+    margin: 40px;
+    text-align: justify;
+    max-width: 650px;
+}
+
+.para h1 {
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Sofia", cursive;
+    color: rgb(255, 114, 0);
+    text-shadow: 3px 3px 5px black;
+}
+
+.para p {
+    font-size: 20px;
+    font-family: "Ubuntu", arial;
+    line-height: 30px;
+}
+
+.MandV {
+    margin: 40px;
+    background-color: rgb(245, 241, 241);
+    padding: 20px;
+    height: 470px;
+    max-width: 470px;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.MandV h3 {
+    font-family: "Ubuntu", arial;
+}
+
+.MandV p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: "Ubuntu", arial;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.card {
+    display: flex;
+}
+
+.card h3{
+    margin-left: 40px;
+    margin-top: 25px;
+}

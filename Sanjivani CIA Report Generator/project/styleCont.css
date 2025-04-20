@@ -1,0 +1,139 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    width: 99%;
+    height: 730px;
+    background-size: cover;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color:rgb(255, 114, 0) ;
+}
+
+.icon {
+    width: 100px;
+    float: left;
+    height: 70px;
+}
+
+.icon img {
+    max-width: 72px;
+    padding-left: 20px;
+}
+
+.menu {
+    width: 400px;
+    height: 70px;
+    float: left;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+ul li {
+    margin-left: 30px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: "Ubuntu", arial;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    transition: 0.35s ease-in-out;
+
+}
+
+ul li a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(12, 12, 12);
+    transform: scale(1.1);
+}
+
+.loginAs {
+    width: 400px;
+    margin-right: 60px;
+    float: right;
+    text-align: right;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 16px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px black;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border: 3px solid rgb(8, 8, 8);
+}
+
+.content {
+    display: flex;
+}
+
+.map {
+    margin-top: 100px;
+    margin-left: 100px;
+    border: 2px solid rgb(255, 114, 0);
+    max-width: 600px;
+    max-height: 450px;
+}
+
+.info {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.info h2 {
+    font-family: "Sofia", cursive;
+    color: rgb(255, 114, 0);
+    font-size: 40px;
+}
+
+.info h3{
+    font-family: "Ubuntu", arial;
+    color: black;
+    font-size: 30px;
+    margin: 10px;
+}
+
+pre {
+    font-family: "Ubuntu", arial;
+    color: black;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+p {
+    font-family: "Ubuntu", arial;
+    color: black;
+    font-size: 18px;
+    line-height: 25px;
+}

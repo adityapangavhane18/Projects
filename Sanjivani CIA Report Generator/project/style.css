@@ -1,0 +1,282 @@
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img.jpg');
+    width: 99%;
+    height: 730px;
+    background-size: cover;
+}
+
+.navbar {
+    height: 75px;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.icon {
+    width: 100px;
+    float: left;
+    height: 70px;
+}
+
+.icon img {
+    max-width: 72px;
+    padding-left: 20px;
+}
+
+.menu {
+    width: 400px;
+    height: 70px;
+    float: left;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+ul li {
+    margin-left: 30px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: "Ubuntu", arial;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    transition: 0.35s ease-in-out;
+
+}
+
+ul li a:hover {
+    color: rgb(255, 114, 0);
+    text-shadow: 2px 2px 5px rgb(12, 12, 12);
+}
+
+.loginAs {
+    width: 400px;
+    margin-right: 60px;
+    float: right;
+    text-align: right;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    background: rgb(255, 114, 0);
+    border: 2px solid rgb(255, 114, 0);
+    margin-top: 16px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: rgb(255, 254, 254);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px black;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border: 3px solid rgb(255, 114, 0);
+}
+
+.body1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    margin-top: 150px;
+    margin-left: 60px;
+}
+
+.list{
+    font-weight: bold;
+    font-family: "Playwrite GB S", cursive;
+    text-shadow: 3px 3px 5px rgb(10, 10, 10);
+    color: white;
+    margin-left: 30px;
+    display: block;
+    line-height: 7px;
+    list-style-type: disc;
+}
+
+.content span {
+    color: rgb(255, 114, 0);
+    text-shadow: 3px 3px 5px rgb(10, 10, 10);
+    font-family: "Sofia", cursive;
+    line-height: 10px;
+}
+
+.content h1 {
+    color: white;
+    font-size: 68px;
+    font-family: "Sofia", cursive;
+    text-shadow: 3px 3px 5px rgb(10, 10, 10);
+    line-height: 90px;
+}
+
+.loginBox {
+    /* background-color: black; */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 380px;
+    height: 490px;
+    border: 4px solid rgb(255, 114, 0);
+    border-radius: 25px;
+    margin-top: 60px;
+    margin-right: 50px;
+    float: right;    
+    padding: 25px;
+    font-family: "Ubuntu", arial;
+}
+
+.loginBox h1 {
+    color: white;
+    text-align: center;
+}
+
+.loginBox label {
+    font-size: 30px;
+    color: white;
+}
+
+.loginBox input {
+    width: 95%;
+    height: 30px;
+    background: linear-gradient(rgba(109, 101, 101, 0.5), rgba(109, 101, 101, 0.5));
+    border: 3px solid saddlebrown;
+    border-radius: 10px;
+    padding-left: 3px;
+    margin-top: 13px;
+    -right: 0px;
+    font-size: 23px;
+    box-shadow: 3px 3px 10px rgb(255, 114, 0) ;
+    color: white;
+}
+
+.btn2 {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    width: 50%;
+    background-color: rgb(255, 114, 0);
+    color: white;
+    height: 40px;
+    margin-left: 25%;
+    border: 2px solid black;
+    border-radius: 7px;
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn2:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px black;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border: 3px solid rgb(255, 114, 0);
+    cursor: pointer;
+}
+
+.loginBox p{
+    color: white;
+    margin-left: 18%;
+}
+
+.loginBox a{
+    color: rgb(255, 114, 0);
+    text-decoration: none;
+}
+
+.loginBox a:hover {
+    text-decoration: underline;
+}
+
+.icons{
+    padding-left: 20px;
+}
+
+.icons a{
+    text-decoration: none;
+    color: white;
+}
+
+.icons ion-icon{
+    color: white;
+    font-size: 30px;
+    padding-top: 25px;
+    padding-left: 20px;
+    transition: 0.3s;
+}
+
+.icons ion-icon:hover{
+    color: rgb(255, 114, 0);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.role-button-container {
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+/* Styling for each role button */
+.roleBtn {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    width: 75%;
+    background-color: rgb(255, 114, 0);
+    color: white;
+    height: 60px;
+    margin-left: 25%;
+    border: 2px solid black;
+    border-radius: 7px;
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.roleBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px black;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border: 3px solid rgb(255, 114, 0);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+

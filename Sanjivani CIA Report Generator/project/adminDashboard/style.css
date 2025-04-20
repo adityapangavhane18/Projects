@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light background */
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: rgb(255, 114, 0);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+    background-color: white;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px; /* Limit max width of forms */
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden initially */
+    position: relative;
+    margin: 0 auto; /* Horizontal centering */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    font-size: 16px;
+}
+
+button[type="submit"], button[type="button"] {
+    background-color: rgb(255, 114, 0); /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+    background-color: rgb(230, 100, 0);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.active-form {
+    display: block !important;
+}

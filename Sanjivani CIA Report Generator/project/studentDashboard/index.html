@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Student Result </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Result Portal</h2>
+        <br>
+
+        <!-- Student Login Form -->
+        <div class="form-container">
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="prn">Student PRN Number:</label>
+                    <input type="text" id="prn" name="prn" placeholder="Enter your PRN no:" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="motherName">Mother's Name:</label>
+                    <input type="text" id="motherName" name="motherName" placeholder="Enter your Mother name" required>
+                </div>
+                <br>
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Result Table (Hidden initially) -->
+        <div id="resultSection" class="hidden">
+            <h2>Result</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DAA</td>
+                        <td>90</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>WT</td>
+                        <td>85</td>
+                        <td>A</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>TOC</td>
+                        <td>88</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>CN</td>
+                        <td>88</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>CC</td>
+                        <td>88</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="downloadBtn">Download as PDF</button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript for form validation and PDF download -->
+    <script src="script.js"></script>
+</body>
+</html>

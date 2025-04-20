@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Annual Report Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <nav class="navbar">
+            <h2>Admin Dashboard</h2>
+            <div class="nav-links">
+                <a href="#" onclick="showStudentForm()">Add Student</a>
+                <a href="#" onclick="showFacultyForm()">Add Faculty</a>
+                <a href="#" onclick="showAnnouncements()">Announcements</a>
+                <a href="../index.html">Logout</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h1></h1>
+            </header>
+
+            <section id="forms-section">
+                <div id="student-form" class="form-container hidden">
+                    <h2>Student Registration Form</h2>
+                    <form id="student-reg-form" action="demo.php" method="post">
+                        <label for="student-name">Name:</label>
+                        <input type="text" id="student-name" name="name" required>
+
+                        <label for="student-id">PRN Number:</label>
+                        <input type="text" id="student-id" name="prn" required>
+
+                        <label for="student-dept">Department:</label>
+                        <input type="text" id="student-dept" name="dept" required>
+
+                        <label for="student-year">Year:</label>
+                        <input type="number" id="student-year" name="year" required>
+
+                        <button type="submit">Submit</button>
+                    </form>
+
+                    <!-- <div id="assign-student-button" class="hidden">
+                        <button onclick="showAssignForm()">Assign Students to Faculty</button>
+                    </div> -->
+                </div>
+
+                <div id="faculty-form" class="form-container hidden">
+                    <h2>Faculty Registration Form</h2>
+                    <form id="faculty-reg-form" action="demo.php" method="post">
+                        <label for="faculty-name">Name:</label>
+                        <input type="text" id="faculty-name" name="name" required>
+
+                        <label for="faculty-id">Faculty ID:</label>
+                        <input type="text" id="faculty-id" name="id" required>
+
+                        <label for="faculty-dept">Department:</label>
+                        <input type="text" id="faculty-dept" name="dept" required>
+
+                        <label for="faculty-email">Email:</label>
+                        <input type="email" id="faculty-email" name="email" required>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div id="announcements" class="form-container hidden">
+                    <h2>Announcements</h2>
+                    <p>No new announcements at the moment.</p>
+
+                    <h3>Post a New Announcement</h3>
+                    <form id="announcement-form">
+                        <label for="announcement-title">Title:</label>
+                        <input type="text" id="announcement-title" required>
+
+                        <label for="announcement-content">Content:</label>
+                        <textarea id="announcement-content" rows="4" required></textarea>
+
+                        <button type="button" onclick="postAnnouncement()">Post Announcement</button>
+                    </form>
+                </div>
+
+                <div id="assign-form" class="form-container hidden">
+                    <h2>Assign Students to Faculty</h2>
+                    <form>
+                        <label for="faculty-select">Select Faculty:</label>
+                        <select id="faculty-select">
+                            <option value="Select">Select</option>
+                            <option value="Faculty 1">Prof. Kale J.N.</option>
+                            <option value="Faculty 2">Prof. Pardeshi N.G.</option>
+                            <option value="Faculty 3">Prof. Deshmukh S.R.</option>
+                            <option value="Faculty 4">Prof. Bodhe A.S.</option>
+                        </select>
+
+                        <label for="student-assign">Select Student:</label>
+                        <select id="student-assign">
+                            <option value="Select">Select</option>
+                            <option value="Student 1">Shinde Akash</option>
+                            <option value="Student 2">Pathak Kunal</option>
+                            <option value="Student 3">More Aditya</option>
+                            <option value="Student 4">Pawar Rohit</option>
+                        </select>
+
+                        <button type="submit">Assign</button>
+                    </form>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Annual Report Generator. All rights reserved.</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Management - Departments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <h1>Result Management Portal</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Departments</a>
+            <a href="announcement.html">Announcements</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </div>
+
+    <!-- Departments Section -->
+    <div class="departments">
+        <h2>Select a Department</h2>
+        <div class="department-list">
+            <div class="department" onclick="showClasses('comp-dept', this)">
+                <h3>Computer Department</h3>
+            </div>
+            <div class="department" onclick="showClasses('it-dept', this)">
+                <h3>IT Department</h3>
+            </div>
+            <div class="department" onclick="showClasses('ece-dept', this)">
+                <h3>Electronics & Computer Department</h3>
+            </div>
+            <div class="department" onclick="showClasses('mech-dept', this)">
+                <h3>Mechanical Department</h3>
+            </div>
+            <div class="department" onclick="showClasses('mechatronics-dept', this)">
+                <h3>Mechatronics Department</h3>
+            </div>
+            <div class="department" onclick="showClasses('electrical-dept', this)">
+                <h3>Electrical Department</h3>
+            </div>
+            <div class="department" onclick="showClasses('civil-dept', this)">
+                <h3>Civil Department</h3>
+            </div>
+            <div class="department" onclick="showClasses('structural-dept', this)">
+                <h3>Structural Department</h3>
+            </div>
+        </div>
+
+        <!-- Class Cards Section -->
+        <div id="class-cards" class="class-cards"></div>
+
+        <!-- Table Section for Students -->
+        <div id="table-container" class="table-container">
+            <button class="back-button" onclick="goBack()">Back</button>
+            <table id="student-table">
+                <thead>
+                    <tr>
+                        <th>PRN No.</th>
+                        <th>Roll No.</th>
+                        <th>Student Name</th>
+                        <th>CIA 1</th>
+                        <th>CIA 2</th>
+                        <th>CIA 3</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Result Management Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Student Registration Form</h2>
+        <form id="student-reg-form" action="demo.php" method="post" onsubmit="handleFormSubmit(event)">
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" name="name" required>
+
+            <label for="student-prn">PRN Number:</label>
+            <input type="text" id="student-prn" name="prn" required>
+
+            <label for="student-dob">Date of Birth:</label>
+            <input type="date" id="student-dob" name="dob" required>
+
+            <label for="student-class">Class:</label>
+            <input type="text" id="student-class" name="class" required>
+
+            <label for="student-dept">Department:</label>
+            <input type="text" id="student-dept" name="dept" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Success message, initially hidden -->
+        <div id="success-message" style="display: none; color: green; margin-top: 10px;">
+            Data saved successfully.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

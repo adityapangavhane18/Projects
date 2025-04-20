@@ -1,0 +1,536 @@
+/* =========================
+   CSS Variables for Theme
+   ========================= */
+   :root {
+    --primary-color: #FF7200; /* Vibrant orange */
+    --secondary-color: #049AFB; /* Bright blue */
+    --background-gradient: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    --light-bg: #ffffff;
+    --dark-bg: #35424a;
+    --accent-color: #007BFF;
+    --text-color: #333333;
+    --light-text: #f9f9f9;
+    --gold: #FFD700;
+    --transition-speed: 0.3s;
+    --font-primary: 'Arial', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+/* =========================
+   General Styles
+   ========================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background: var(--background-gradient);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.5s ease;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+}
+
+/* =========================
+   Navbar Styles
+   ========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000;
+    transition: background-color var(--transition-speed);
+}
+
+.navbar:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.navbar h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    transition: transform var(--transition-speed);
+}
+
+.navbar h1:hover {
+    transform: scale(1.05);
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+    font-size: 18px;
+}
+
+.navbar nav a:hover {
+    color: var(--dark-bg);
+    transform: translateY(-3px);
+    text-decoration: underline;
+}
+
+/* =========================
+   Profile Section
+   ========================= */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    object-fit: cover;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--gold);
+}
+
+#greeting-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-bg);
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: var(--secondary-color);
+    color: #fff;
+    margin: 50px auto;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s;
+}
+
+.hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background: var(--primary-color);
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* =========================
+   Departments Section
+   ========================= */
+.departments {
+    max-width: 1300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.departments h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.departments h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.department-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.department {
+    background-color: var(--light-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    flex: 0 1 300px;
+    cursor: pointer;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed);
+    position: relative;
+    overflow: hidden;
+}
+
+.department::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: background 0.3s;
+}
+
+.department:hover::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.department:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.department h3 {
+    font-size: 26px;
+    color: var(--dark-bg);
+    transition: color var(--transition-speed);
+}
+
+.department.active {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color var(--transition-speed);
+}
+
+.department.active h3 {
+    color: var(--light-text);
+}
+
+/* =========================
+   Responsive Design for Departments
+   ========================= */
+@media (max-width: 768px) {
+    .department {
+        flex: 0 1 100%;
+    }
+}
+
+/* =========================
+   Class List Styles
+   ========================= */
+.class-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.class-list li {
+    font-size: 20px;
+    margin: 6px 0;
+    transition: color var(--transition-speed);
+}
+
+.class-list li:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* =========================
+   Class Cards Section
+   ========================= */
+.class-cards {
+    display: none;
+    margin-top: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.class-card {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+}
+
+/* =========================
+   Footer Styles
+   ========================= */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+    transition: background-color var(--transition-speed);
+}
+
+footer:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* =========================
+   Animations
+   ========================= */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+.animate-fade-up {
+    animation: slideUp 1.2s ease-in-out forwards;
+}
+
+.animate-zoom-in {
+    animation: zoomIn 0.8s ease-in-out forwards;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .departments {
+        margin: 40px auto;
+    }
+
+    .departments h2 {
+        font-size: 30px;
+    }
+
+    .department {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* =========================
+   Announcement Page Styles
+   ========================= */
+.announcement-page body,
+.help-support-page body {
+    font-family: var(--font-primary);
+    background-color: #f4f4f4;
+}
+
+.navbar.announcement,
+.navbar.help-support {
+    background-color: var(--dark-bg);
+}
+
+.navbar.announcement nav a,
+.navbar.help-support nav a {
+    color: var(--light-text);
+}
+
+.navbar.announcement nav a:hover,
+.navbar.help-support nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    color: var(--dark-bg);
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.container p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.container a {
+    color: var(--dark-bg);
+    font-weight: bold;
+    transition: color var(--transition-speed);
+}
+
+.container a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* =========================
+   Help & Support Page Styles
+   ========================= */
+.faq {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color var(--transition-speed);
+}
+
+.faq:hover {
+    background-color: #f1f1f1;
+}
+
+.faq h3 {
+    margin: 0 0 10px 0;
+    color: var(--dark-bg);
+}
+
+.faq p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* =========================
+   Interactive Elements
+   ========================= */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.back-button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+.action-button {
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.action-button:hover {
+    background-color: darken(var(--accent-color), 10%);
+    transform: scale(1.05);
+}
+
+/* =========================
+   Tables
+   ========================= */
+.table-container {
+    display: none;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+td {
+    background-color: #fff;
+    transition: background-color var(--transition-speed);
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}

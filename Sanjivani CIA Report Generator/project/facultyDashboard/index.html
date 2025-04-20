@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <h1 class="animate-fade-in">Faculty Dashboard</h1>
+        <div class="profile">
+            <img id="faculty-photo" src="photos/kalesir.jpg" alt="Faculty Profile"
+                onerror="this.src='https://via.placeholder.com/100';" class="profile-img animate-zoom-in">
+            <div class="greeting" id="greeting-message"></div>
+        </div>
+        <nav class="animate-slide-up">
+            <a href="result_management.html">Result Management</a>
+            <a href="announcement.html">Announcement</a>
+            <a href="help-support.html">Help & Support</a>
+            <a href="../index.html">Logout</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero animate-fade-up">
+        <h2>Welcome to the Faculty Dashboard</h2>
+        <p>Your Space to Manage Results, Announcements, and Support Efficiently.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="animate-fade-in">
+        <p>&copy; 2024 Faculty Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function generateGreeting() {
+            const currentHour = new Date().getHours();
+            const greeting = currentHour < 12 ? "Good Morning, Faculty!" :
+                             currentHour < 18 ? "Good Afternoon, Faculty!" :
+                             "Good Evening, Faculty!";
+            document.getElementById("greeting-message").textContent = greeting;
+        }
+        window.addEventListener('load', generateGreeting);
+    </script>
+</body>
+</html>
