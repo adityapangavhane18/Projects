@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Cow Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 2px solid orange;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .save-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Edit Cow Entry</h2>
+
+    <form class="form-container" method="POST">
+        {% csrf_token %}
+        <input type="text" name="farmer_id" value="{{ cow.farmer_id }}" required>
+        <input type="text" name="cow_id" value="{{ cow.cow_id }}" required>
+        <input type="text" name="cow_name" value="{{ cow.cow_name }}" required>
+        <input type="text" name="cow_color" value="{{ cow.cow_color }}" required>
+        <input type="text" name="breeding_data" value="{{ cow.breeding_data }}" required>
+        <button type="submit" class="btn save-btn">Save Changes</button>
+    </form>
+
+</body>
+</html>

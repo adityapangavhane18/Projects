@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cow Registration Form</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0; /* Light Cream */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Logo Styling */
+        .logo_container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 120px; /* Adjust logo size */
+            height: auto;
+        }
+
+        /* Form Container */
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 350px;
+        }
+
+        /* Form Title */
+        h2 {
+            color: black;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Form Elements */
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 2px solid orange;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* Submit Button */
+        button {
+            background-color: orange;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <!-- Form Container -->
+    <div class="form-container">
+        <h2>Cow Registration Form</h2>
+        <form action="{% url 'cow_entries' %}" method="POST">
+            {% csrf_token %}
+            <label for="farmer_id">Farmer ID:</label>
+            <input type="text" id="farmer_id" name="farmer_id" required>
+
+            <label for="cow_id">Cow Tag No:</label>
+            <input type="text" id="cow_id" name="cow_id" required>
+
+            <label for="cow_name">Cow Name:</label>
+            <input type="text" id="cow_name" name="cow_name" required>
+
+            <label for="cow_color">Color of Cow:</label>
+            <input type="text" id="cow_color" name="cow_color" required>
+
+            <label for="breeding_data">Breeding Data (Optional):</label>
+            <textarea id="breeding_data" name="breeding_data" rows="3"></textarea>
+
+            <button type="submit">Submit Information</button>
+        </form>
+    </div>
+</body>
+</html>

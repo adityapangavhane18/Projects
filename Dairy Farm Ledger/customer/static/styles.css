@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img1.jpg') no-repeat center center fixed; /* Background image added */
+    background-size: cover; /* Ensures the image covers the entire page */
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background to make text readable */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo_container a img {
+    width: 150px;
+}
+
+.nav_bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1opx;
+}
+
+.nav_bar a:hover {
+    color: #ff7b00;
+}
+
+.search_bar input {
+    padding: 8px;
+    width: 250px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 20px;
+}
+
+/* Main Container Styling */
+.MianContainer {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #ff7b00;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e56a00;
+}
+
+/* Section Styling */
+.why-choose-us, .explore-section, .about-us {
+    padding: 60px 20px;
+    background-color: rgba(241, 241, 241, 0.9); /* Semi-transparent background */
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features, .product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-card, .product-item {
+    background-color: white;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img, .product-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    padding: 12px 25px;
+    background-color: #ff7b00;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #e56a00;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .features, .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card, .product-item {
+        width: 80%;
+    }
+}            

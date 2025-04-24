@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="{% static 'nav.css' %}">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('{% static "img1.jpg" %}') no-repeat center center fixed; /* Background image */
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: rgba(51, 51, 51, 0.7);
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo_container a img {
+            width: 150px;
+        }
+
+        /* Form Container */
+        .registration-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .registration-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #ff7b00;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e56a00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .registration-form {
+                width: 80%;
+                padding: 20px;
+            }
+        }
+
+        /* Messages */
+        .messages {
+            color: red;
+            font-size: 16px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Registration Form -->
+    <div class="registration-form">
+        <h2>Create Account</h2>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" placeholder="Enter your full name" required>
+
+            <label for="city">City:</label>
+            <input type="text" name="city" placeholder="Enter your city" required>
+
+            <label for="username">Farmer ID:</label>
+            <input type="text" name="username" placeholder="Choose a username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Choose a password" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Display Messages -->
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{% if message.tags == 'success' %}success{% endif %}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dairy Farm Ledger. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

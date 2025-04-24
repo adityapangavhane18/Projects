@@ -1,0 +1,47 @@
+/* Navigation Bar Styling */
+header {
+    background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background for better readability */
+    padding: 10px 5%; /* Adding some left-right padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensures the navbar spans the full width */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+.logo_container a img {
+    width: 150px;
+}
+
+.nav_bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav_bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.nav_bar a:hover {
+    color: #ff7b00;
+}
+
+.search_bar input {
+    padding: 8px;
+    width: 250px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 20px;
+}
+
+/* Ensure content does not hide behind the fixed navbar */
+body {
+    padding-top: 70px; /* Adjust based on header height */
+}

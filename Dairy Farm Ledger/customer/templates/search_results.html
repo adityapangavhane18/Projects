@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Entry Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            width: 80%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: orange;
+            color: white;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Milk Entries for Farmer ID: {{ farmer_id }}</h2>
+
+    {% if records %}
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Litres</th>
+                <th>Price/Litre</th>
+                <th>Fat</th>
+                <th>Total Amount</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.date }}</td>
+                <td>{{ record.litre }}</td>
+                <td>{{ record.price_per_litre }}</td>
+                <td>{{ record.fat }}</td>
+                <td>{{ record.total_amount }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% else %}
+        <p style="color:red;">No records found for Farmer ID: {{ farmer_id }}</p>
+    {% endif %}
+
+    <button class="back-button" onclick="window.location.href='{% url 'check_record' %}';">Go Back</button>
+
+</body>
+</html>
